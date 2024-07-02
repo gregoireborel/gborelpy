@@ -28,15 +28,15 @@ class GeneratePath(beam.DoFn):
 
     """
 
-    def __init__(self, bucket, input_date):
+    def __init__(self, bucket, input_date, event_types):
         self.bucket = bucket
         self.input_date = input_date
+        self.event_types = event_types
 
     def process(self, element):
         """
         Generates a GCS path for each event type and yields it.
         """
-        filename = (
-            f"gs://{self.bucket}/Campaign Engagement/{self.input_date.get()}**/**"
-        )
-        yield filename
+        for event_type in self.event_types:
+            yield f"gs://{self.bucket}/{self.event_type}/{self.input_date.get()}**/**"
+
