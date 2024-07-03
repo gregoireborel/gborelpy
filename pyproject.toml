@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gborelpy"
-version = "0.2.0"
+version = "0.3.0"
 description = "Python utilities for Gymshark python projects"
 authors = ["Gregoire Borel <gregoire.borel@neoxia.com>"]
 readme = "README.md"
