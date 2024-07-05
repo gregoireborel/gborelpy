@@ -1,27 +1,15 @@
 # gborelpy
 
-Python utilities for Gymshark projects and services.
+Python utilities for gborel projects and services.
 
-## Build and publish locally
+## Maintenance
 1. Login
 ```bash
 gcloud auth login
 gcloud auth application-default login
 ```
-2. Outside your package virtual environment, install Poetry and Twine
-    - [Poetry](https://python-poetry.org/docs/)
-    - 
-        ```bash
-        pip install twine
-        ```
-3. Configure authentication to Artifact Registry for Python package repositories by following [Authenticating with keyring](https://cloud.google.com/artifact-registry/docs/python/authentication#keyring) (from your package virtual environment)
-4. Make your changes in the code. Don't forget to update version number in [pyproject.toml](./pyproject.toml)
-5. Build the package (_dist_ folder will be created) and publish it
-```bash
-cd ~/gborelpy
-poetry build
-python3 -m twine upload --repository-url https://[LOCATION].pkg.dev/PROJECT_ID/[REPO]/ dist/*
-```
+2. Update the code
+3. Amend the package version in [pyproject.toml](./pyproject.toml)
 
 ## Install the package in a project locally
 Go to your project virtual environment.
