@@ -14,11 +14,18 @@ gcloud auth application-default login
 ## Install the package in a project locally
 Go to your project virtual environment.
 
-1. Tell pip where to download the package
+1. Follow the setup instructions from the Artifact Registry repository:
+```bash
+gcloud artifacts print-settings python \
+    --project=gborel-sample-project \
+    --repository=python-repo \
+    --location=europe-west1
+```
+2. Tell pip where to download the package
 ```bash
 pip install --index-url https://[LOCATION].pkg.dev/PROJECT_ID/[REPO]/ gborelpy
 ```
-2. Check that package has been successfully imported. In your code:
+3. Check that package has been successfully imported. In your code:
 ```
 from gborelpy.beam_utils import ParseJSON
 ```
