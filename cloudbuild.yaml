@@ -12,7 +12,7 @@ steps:
   - 'twine'
   - 'upload'
   - '--repository-url'
-  - 'https://${LOCATION}-python.pkg.dev/$PROJECT_ID/${_REPOSITORY}/'
+  - 'https://${LOCATION}-python.pkg.dev/$PROJECT_ID/${REPO_NAME}/'
   - 'dist/*'
 
 options:
